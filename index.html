@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Python Renan Fulas</title>
+    <!-- Importando fonte moderna 'Poppins' -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-page" class="page active">
+        <div class="form-container">
+            <h2>Bem-vindo de volta</h2>
+            <p class="subtitle">Acesse sua conta para continuar</p>
+            <input type="text" id="login-username" placeholder="Usuário ou E-mail" required>
+            <input type="password" id="login-password" placeholder="Senha" required>
+            <button id="login-button">Entrar</button>
+            <p class="switch-page">Não tem uma conta? <a href="#" id="show-register">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <div id="register-page" class="page">
+        <div class="form-container">
+            <h2>Criar Conta</h2>
+            <p class="subtitle">Comece sua jornada hoje</p>
+            <input type="text" id="register-username" placeholder="Nome de Usuário" required>
+            <input type="email" id="register-email" placeholder="E-mail" required>
+            <input type="password" id="register-password" placeholder="Senha" required>
+            <div class="password-requirements">
+                <small>Mínimo 8 caracteres, 1 maiúscula, 1 número, 1 especial.</small>
+            </div>
+            <button id="register-button">Cadastrar</button>
+            <p class="switch-page">Já tem uma conta? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+
+    <div id="app-page" class="page">
+        <header>
+            <h1>Projeto Python Renan Fulas</h1>
+            <button id="logout-button" class="outline-btn">Sair</button>
+        </header>
+        <main>
+            <div class="rm-input-container">
+                <h3>Registrar Novo RM</h3>
+                <div class="input-group">
+                    <input type="text" id="exercise-name" placeholder="Nome do Exercício (ex: Back Squat)">
+                    <input type="number" id="rm-value" placeholder="1RM em kg (ex: 100)">
+                </div>
+                <button id="save-rm-button">Salvar RM</button>
+            </div>
+            <div id="rm-list">
+                <!-- Os RMs salvos aparecerão aqui -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

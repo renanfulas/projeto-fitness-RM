@@ -79,7 +79,7 @@ Durante o desenvolvimento, um dos principais desafios foi garantir a boa UI/Inte
 os botões aconteciam muitos erros.
 
 Para resolver isso, implementei:
-- simplifiquei mais ainda a minha ideia o que tornou mais funcional o site do que meu primeiro pensamento
+- Uma simplificação da ideia o que tornou o projeto mais funcional e melhor ainda do que eu havia pensado de primeiro
 
 📚 **Aprendizados**
 Este projeto foi importante para praticar:

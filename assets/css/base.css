@@ -1,0 +1,103 @@
+:root {
+    --bg: #f3ede2;
+    --surface: rgba(255, 250, 244, 0.9);
+    --surface-strong: #fff9f0;
+    --panel: #1d1b18;
+    --text: #161411;
+    --text-soft: #615b53;
+    --line: rgba(22, 20, 17, 0.12);
+    --brand: #b6542a;
+    --brand-dark: #8e3e1c;
+    --success: #295b48;
+    --shadow: 0 24px 60px rgba(42, 30, 16, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Barlow', sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(217, 164, 65, 0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(182, 84, 42, 0.2), transparent 30%),
+        linear-gradient(135deg, #f6f0e7 0%, #efe5d6 48%, #eadcca 100%);
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.eyebrow,
+.section-tag {
+    margin: 0 0 12px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    color: #f0be65;
+}
+
+.section-tag {
+    color: var(--brand);
+}
+
+h1,
+h2,
+h3,
+strong {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    line-height: 0.94;
+    max-width: 11ch;
+}
+
+h2 {
+    margin: 0;
+    font-size: clamp(1.75rem, 2.2vw, 2.25rem);
+    line-height: 1.05;
+}
+
+.brand-copy,
+.section-copy,
+.message-card p,
+.benefits-list,
+.app-summary span,
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.section-copy {
+    margin: 12px 0 22px;
+    color: var(--text-soft);
+}
+
+p {
+    margin: 18px 0 0;
+    color: var(--text-soft);
+}
+
+a {
+    color: var(--brand);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+}

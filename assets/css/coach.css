@@ -1,0 +1,146 @@
+.coach-card {
+    margin-bottom: 18px;
+    padding: 20px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(255, 252, 247, 0.95), rgba(246, 236, 221, 0.92));
+    border: 1px solid rgba(22, 20, 17, 0.08);
+    box-shadow: 0 10px 24px rgba(48, 31, 13, 0.06);
+}
+
+.brand-panel .coach-card {
+    margin-top: 32px;
+}
+
+.coach-header,
+.coach-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.coach-header {
+    margin-bottom: 16px;
+}
+
+.coach-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.coach-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(41, 91, 72, 0.12);
+    color: var(--success);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.coach-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.coach-chip {
+    padding: 10px 14px;
+    border: 1px solid rgba(22, 20, 17, 0.08);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.coach-chip:hover {
+    border-color: rgba(182, 84, 42, 0.22);
+    background: rgba(255, 248, 239, 0.94);
+}
+
+.coach-messages {
+    display: grid;
+    gap: 12px;
+    max-height: 520px;
+    overflow-y: auto;
+    padding-right: 4px;
+    margin-bottom: 12px;
+}
+
+.coach-message {
+    display: grid;
+    gap: 6px;
+    max-width: min(100%, 720px);
+}
+
+.coach-message-user {
+    justify-self: end;
+}
+
+.coach-message-assistant {
+    justify-self: start;
+}
+
+.coach-message-meta {
+    color: var(--text-soft);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.coach-bubble {
+    padding: 14px 16px;
+    border-radius: 18px;
+    line-height: 1.6;
+    white-space: normal;
+}
+
+.coach-message-user .coach-bubble {
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+    color: #fff7ee;
+    border-top-right-radius: 6px;
+}
+
+.coach-message-assistant .coach-bubble {
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--text);
+    border: 1px solid rgba(22, 20, 17, 0.08);
+    border-top-left-radius: 6px;
+}
+
+.coach-typing {
+    margin: 0 0 12px;
+    padding: 11px 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(22, 20, 17, 0.08);
+    color: var(--text-soft);
+    font-weight: 600;
+}
+
+.coach-form {
+    display: grid;
+    gap: 12px;
+}
+
+.coach-disclaimer {
+    margin: 0;
+    max-width: 58ch;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+}
+
+.coach-send-button {
+    width: auto;
+    min-width: 152px;
+    margin-bottom: 0;
+}

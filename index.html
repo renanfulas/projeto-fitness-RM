@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOVERIGN RM TRACK</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/coach.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -55,6 +60,32 @@
                         </p>
                     </article>
                 </div>
+
+                <section class="coach-card">
+                    <div class="coach-header">
+                        <div>
+                            <p class="section-tag">Coach IA</p>
+                            <h3>Assistente de treino</h3>
+                            <p class="section-copy">Pergunte sobre estrutura de treino, progressao de carga, sinais de excesso e formas mais seguras de evoluir.</p>
+                        </div>
+                        <span class="coach-badge">Beta</span>
+                    </div>
+                    <div id="coach-suggestions" class="coach-suggestions">
+                        <button type="button" class="coach-chip" data-prompt="Monte um treino basico com os exercicios que eu ja registrei">Montar treino</button>
+                        <button type="button" class="coach-chip" data-prompt="Que cargas eu posso usar no proximo treino?">Sugerir cargas</button>
+                        <button type="button" class="coach-chip" data-prompt="Como posso evoluir sem me machucar?">Seguranca</button>
+                        <button type="button" class="coach-chip" data-prompt="Me mostre em qual exercicio eu mais evolui">Minha evolucao</button>
+                    </div>
+                    <div id="coach-messages" class="coach-messages" aria-live="polite"></div>
+                    <div id="coach-typing" class="coach-typing hidden">O coach IA esta analisando seus registros...</div>
+                    <form id="coach-form" class="coach-form">
+                        <textarea id="coach-input" rows="3" placeholder="Ex.: monte um treino de 3 dias, que carga usar no supino ou como evitar excesso de fadiga"></textarea>
+                        <div class="coach-form-footer">
+                            <p class="coach-disclaimer">Orientacoes educativas. Dor aguda, lesao ou limitacao clinica devem ser avaliadas por profissional habilitado.</p>
+                            <button id="coach-send-button" type="submit" class="btn-primary coach-send-button">Perguntar</button>
+                        </div>
+                    </form>
+                </section>
             </div>
 
             <ul class="benefits-list">
@@ -114,7 +145,11 @@
 
                 <div class="add-card">
                     <p class="section-tag">Novo registro</p>
-                    <div class="entry-form">
+                    <form id="entry-form" class="entry-form">
+                        <div class="entry-form-heading">
+                            <p id="form-mode-label" class="entry-mode">Modo rapido</p>
+                            <button type="button" id="cancel-edit-button" class="btn-secondary hidden">Cancelar edicao</button>
+                        </div>
                         <input type="text" id="exercise-name" class="entry-form-main" placeholder="Exercicio">
                         <div class="entry-form-row">
                             <label class="entry-form-field" for="rm-value">
@@ -126,10 +161,14 @@
                                 <input type="number" id="reps-value" placeholder="Repeticoes" min="1" max="15" value="1">
                             </label>
                         </div>
-                        <button id="save-rm-button">Salvar</button>
-                    </div>
+                        <div id="entry-preview" class="entry-preview">Preencha carga e repeticoes para visualizar o 1RM estimado.</div>
+                        <div class="entry-form-actions">
+                            <button id="save-rm-button" type="submit">Salvar registro</button>
+                        </div>
+                    </form>
+                    <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
                     <p class="form-helper">
-                        Use 1 repeticao para registrar um 1RM direto. Com 2 ou mais repeticoes, o app estima o 1RM automaticamente.
+                        Use 1 repeticao para registrar um 1RM direto. Com 2 ou mais repeticoes, o app estima o 1RM automaticamente. Pressione Enter para salvar mais rapido.
                     </p>
                 </div>
 
@@ -140,6 +179,13 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="assets/js/utils/formatters.js"></script>
+    <script src="assets/js/core/storage.js"></script>
+    <script src="assets/js/core/entries.js"></script>
+    <script src="assets/js/core/metrics.js"></script>
+    <script src="assets/js/core/coach-engine.js"></script>
+    <script src="assets/js/ui/forms.js"></script>
+    <script src="assets/js/ui/renderers.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

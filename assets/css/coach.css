@@ -8,7 +8,80 @@
 }
 
 .brand-panel .coach-card {
-    margin-top: 32px;
+    margin-top: 40px;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(14px);
+}
+
+.brand-panel .coach-card .section-tag,
+.brand-panel .coach-card h3,
+.brand-panel .coach-card .section-copy,
+.brand-panel .coach-card .coach-message-meta,
+.brand-panel .coach-card .coach-disclaimer,
+.brand-panel .coach-card .coach-typing {
+    color: rgba(247, 241, 232, 0.84);
+}
+
+.brand-panel .coach-card h3 {
+    color: #fff8ef;
+}
+
+.brand-panel .coach-badge {
+    background: rgba(240, 190, 101, 0.16);
+    color: #ffd98f;
+}
+
+.brand-panel .coach-chip {
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff4e5;
+}
+
+.brand-panel .coach-chip:hover {
+    border-color: rgba(240, 190, 101, 0.3);
+    background: rgba(240, 190, 101, 0.12);
+}
+
+.brand-panel .coach-messages {
+    max-height: 360px;
+    padding-right: 6px;
+}
+
+.brand-panel .coach-message {
+    max-width: 100%;
+}
+
+.brand-panel .coach-message-assistant .coach-bubble {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff7ee;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.brand-panel .coach-message-user .coach-bubble {
+    background: linear-gradient(135deg, rgba(240, 190, 101, 0.9) 0%, rgba(182, 84, 42, 0.95) 100%);
+}
+
+.brand-panel .coach-typing {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.brand-panel #coach-input {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.14);
+    color: #fff7ee;
+}
+
+.brand-panel #coach-input::placeholder {
+    color: rgba(247, 241, 232, 0.52);
+}
+
+.brand-panel .coach-send-button {
+    min-width: 176px;
+    box-shadow: 0 16px 30px rgba(182, 84, 42, 0.26);
 }
 
 .coach-header,

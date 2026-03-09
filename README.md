@@ -33,6 +33,7 @@ Entre os pontos centrais da solucao:
 - comparacao entre primeiro registro, ultimo registro e melhor marca
 - painel com destaque de progresso, ranking interno e mural de PRs
 - calculadora de percentual de carga a partir do 1RM atual
+- assistente Coach IA com orientacoes locais baseadas no historico salvo
 
 ## Funcionalidades
 
@@ -42,9 +43,11 @@ Entre os pontos centrais da solucao:
 - registro de carga e repeticoes por exercicio
 - calculo de 1RM direto ou estimado
 - historico com data e horario
-- visualizacao de progresso por exercicio
+- edicao e exclusao de registros
+- visualizacao de progresso por exercicio com grafico de evolucao
 - painel com insights e destaques de performance
 - slider para sugerir carga por percentual do 1RM
+- Coach IA com respostas contextuais sobre treino, progressao, seguranca e recuperacao
 
 ## Stack utilizada
 
@@ -60,6 +63,8 @@ Entre os pontos centrais da solucao:
 - Persistencia local para facilitar testes e uso imediato sem backend.
 - Interface reorganizada para priorizar velocidade de registro e leitura de progresso.
 - Estrutura em SPA simples, com alternancia entre login, cadastro e painel principal.
+- Arquitetura modular em assets/js e assets/css para reduzir retrabalho e facilitar manutencao.
+- Namespace global window.SRM em vez de ES Modules para preservar compatibilidade ao abrir index.html direto no navegador.
 
 ## Resultado de produto
 
@@ -74,18 +79,30 @@ O app entrega um fluxo enxuto para registrar performance e deixa a evolucao visi
 ## Estrutura do projeto
 
 - index.html: estrutura principal da interface
-- style.css: identidade visual, responsividade e layout
-- script.js: autenticacao local, regras de negocio e renderizacao do painel
+- assets/css/base.css: tokens visuais e estilos globais
+- assets/css/layout.css: grid principal, painel institucional e shell da aplicacao
+- assets/css/forms.css: formularios, botoes e card de novo registro
+- assets/css/dashboard.css: cards de progresso, historico e grafico de evolucao
+- assets/css/coach.css: interface do Coach IA e variacoes visuais por contexto
+- assets/css/responsive.css: ajustes de responsividade
+- assets/js/utils/formatters.js: funcoes utilitarias e formatacao
+- assets/js/core/storage.js: persistencia em LocalStorage e SessionStorage
+- assets/js/core/entries.js: regras de negocio dos registros de RM
+- assets/js/core/metrics.js: metricas, comparacoes e mensagens de progresso
+- assets/js/core/coach-engine.js: motor local do Coach IA
+- assets/js/ui/forms.js: comportamento e validacao do formulario
+- assets/js/ui/renderers.js: renderizacao do dashboard, historico, grafico e conversa
+- assets/js/app.js: bootstrap da aplicacao e integracao entre modulos
 - README.md: documentacao do projeto
 
 ## Melhorias futuras
 
-- edicao e exclusao de registros
 - filtros por periodo e por exercicio
 - exportacao de relatorios
 - graficos comparativos mais detalhados
 - sincronizacao com backend
 - suporte a multiusuario profissional
+- integracao com API de IA externa para respostas mais profundas e personalizadas
 
 ## Portfolio
 
@@ -94,5 +111,7 @@ Esse projeto demonstra:
 - construcao de interface web responsiva sem framework
 - manipulacao de DOM com JavaScript puro
 - organizacao de fluxo de autenticacao local
-- modelagem de dados simples para historico de performance
+- modelagem de dados para historico de performance e comparacao por exercicio
+- refatoracao de front-end monolitico para arquitetura modular
+- criacao de assistente local orientado por regras e contexto do usuario
 - transformacao de um problema operacional em produto digital util

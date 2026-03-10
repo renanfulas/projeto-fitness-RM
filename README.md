@@ -2,7 +2,9 @@
 
 Aplicacao web para registro e acompanhamento de performance em exercicios de forca, com foco em rapidez operacional, leitura visual da evolucao e organizacao do historico por usuario.
 
-Video explicativo no YouTube: https://www.youtube.com/watch?v=BRCk91LBTwI
+Vídeo das melhorias no YouTube: https://www.youtube.com/watch?v=3QvBNETFWd0
+
+Video explicativo no YouTube: https://www.youtube.com/watch?v=BRCk91LBTwI (Old)
 
 ## Visao geral
 
